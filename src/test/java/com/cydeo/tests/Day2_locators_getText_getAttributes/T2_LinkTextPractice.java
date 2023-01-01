@@ -19,7 +19,7 @@ public class T2_LinkTextPractice {
         driver.navigate().to("https://practice.cydeo.com");
 
         //3- Click to A/B Testing from top of the list.
-      //  driver.findElement(By.linkText("A/B Testing")).click();
+        //  driver.findElement(By.linkText("A/B Testing")).click();
         WebElement abTestLink = driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
 
@@ -47,8 +47,17 @@ public class T2_LinkTextPractice {
         } else System.out.println("Title verification FAILED");
 
         driver.quit();
-
     }
+        /*
+         driver.findElement(By.linkText("Add/Remove Elements")).click();
+         Thread.sleep(3000);
+        driver.findElement(By.linkText("Home")).click();
+        Thread.sleep(3000);
+        */
+
+
+
+
 
 
 }
