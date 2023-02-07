@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T3_GoogleSearchVerification {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException {
         //TC#3: Google search
         //1- Open a Chrome browser
         WebDriverManager.chromedriver().setup();
@@ -17,11 +17,14 @@ public class T3_GoogleSearchVerification {
 
         //2- Go to: https://google.com
         driver.navigate().to("https://google.com");
-       // driver.manage().window().fullscreen();
+
+        // driver.manage().window().fullscreen();
         Thread.sleep(2000);
+
         // To reject cookies when prompted on browser
         driver.findElement(By.cssSelector("button[id='W0wltc']")).click();
         Thread.sleep(2000);
+
         // To accept cookies when prompted on browser
         //driver.findElement(By.cssSelector("button[id='L2AGLb']")).click();
 
@@ -30,8 +33,9 @@ public class T3_GoogleSearchVerification {
         WebElement googleSearchBox = driver.findElement(By.name("q"));
         googleSearchBox.sendKeys("apple" + Keys.ENTER);
         Thread.sleep(2000);
+
         //4- Click google search button
-      //  WebElement search = driver.findElement(By.name("btnK"));
+        //  WebElement search = driver.findElement(By.name("btnK"));
         //search.click();
 
         //5- Verify title:
